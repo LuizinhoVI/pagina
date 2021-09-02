@@ -1,0 +1,14 @@
+ O volume na unidade C n∆o tem nome.
+ O N£mero de SÇrie do Volume Ç 1C7F-9613
+
+ Pasta de C:\Users\notebook\Documents\GitHub\pagina
+
+02/09/2021  07:04    <DIR>          .
+02/09/2021  07:04    <DIR>          ..
+02/09/2021  07:02                 2 index.html
+02/09/2021  07:02                10 README.md
+02/09/2021  07:02                 2 t
+02/09/2021  07:02                 2 tes.txt
+02/09/2021  07:04                 0 teste.txt
+               5 arquivo(s)             16 bytes
+               2 pasta(s)   210.708.357.120 bytes dispon°veis
