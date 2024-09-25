@@ -6,17 +6,16 @@
     "nodemon": "^3.1.7",
     "pg": "^8.13.0",
     "postgres": "^3.4.4",
-    "require": "^2.4.20"
+    "require": "^2.4.20",
+    "servidor-node-banco-de-dados-prosgred": "file:"
   },
   "name": "servidor-node-banco-de-dados-prosgred",
   "version": "1.0.0",
   "description": "A minimal Node.js web application.",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
-
   },
   "keywords": [],
   "author": "",
