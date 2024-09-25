@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="action.js"></script>
     <title>Cadastro</title>
 </head>
 <body>
@@ -29,31 +30,29 @@
     </thead>
   
 </table>
-
 </body>
 <script>
 
     const usuarios = <%- JSON.stringify(usuarios) %>; // Convertendo para JSON
-            console.log(usuarios);
-
-
-            
-
-// o foreach faz a consulta do valor do banco de dados 
-            usuarios.forEach(element => {
-            //   console.log("parabéns"+element.nome)
-
-                if (element.nome === 'luiz') {
-                    console.log(element.nome + " é o meu nome !!");
-                }else{
-                    console.log(element.nome + " não é o meu nome !!");
-                }
-
-
-             
-            });
-
-
-
+    console.log(usuarios);
+    
+    
+    
+    
+    // o foreach faz a consulta do valor do banco de dados 
+    usuarios.forEach(element => {
+    //   console.log("parabéns"+element.nome)
+    
+        if (element.nome === 'luiz') {
+            console.log(element.nome + " é o meu nome !!");
+        }else{
+            console.log(element.nome + " não é o meu nome !!");
+        }
+    
+    
+     
+    });
+    
     </script>
+    
 </html>

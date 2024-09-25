@@ -15,6 +15,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
+
 // Rota principal
 app.get('/', async (req, res) => {
     try {
