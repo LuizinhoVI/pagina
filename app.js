@@ -15,13 +15,30 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
+
 // Rota principal
 app.get('/', async (req, res) => {
     try {
         const result = await client.query('SELECT * FROM usuarios'); // Substitua 'usuarios' pelo nome da sua tabela
         // const usuarios = result.rows; // Obtém os dados da consulta
-        console.log(result)
-        res.render('index', { anime:'naruto' });
+        // console.log(result)
+        const usuarios = result.rows;
+        res.render('index', { anime:"sasuke",usuarios });
+
+    } catch (error) {
+        console.error('Erro ao consultar dados:', error);
+        res.status(500).send('Erro no servidor.');
+    }
+});
+
+// Rota principal
+app.get('/', async (req, res) => {
+    try {
+        const result = await client.query('SELECT * FROM usuarios'); // Substitua 'usuarios' pelo nome da sua tabela
+        // const usuarios = result.rows; // Obtém os dados da consulta
+        // console.log(result)
+        const usuarios = result.rows;
+        res.render('index', { anime:"sasuke",usuarios });
 
     } catch (error) {
         console.error('Erro ao consultar dados:', error);
