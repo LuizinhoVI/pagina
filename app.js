@@ -21,8 +21,23 @@ app.get('/', async (req, res) => {
         const result = await client.query('SELECT * FROM usuarios'); // Substitua 'usuarios' pelo nome da sua tabela
         // const usuarios = result.rows; // Obtém os dados da consulta
         // console.log(result)
-        const nome = result.rows;
-        res.render('index', { nome });
+        const usuarios = result.rows;
+        res.render('index', { anime:"sasuke",usuarios });
+
+    } catch (error) {
+        console.error('Erro ao consultar dados:', error);
+        res.status(500).send('Erro no servidor.');
+    }
+});
+
+// Rota principal
+app.get('/', async (req, res) => {
+    try {
+        const result = await client.query('SELECT * FROM usuarios'); // Substitua 'usuarios' pelo nome da sua tabela
+        // const usuarios = result.rows; // Obtém os dados da consulta
+        // console.log(result)
+        const usuarios = result.rows;
+        res.render('index', { anime:"sasuke",usuarios });
 
     } catch (error) {
         console.error('Erro ao consultar dados:', error);
