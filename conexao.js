@@ -1,12 +1,14 @@
 // db.js
 const { Pool } = require('pg');
+const 
+
 
 // Configurações de conexão (substitua com suas credenciais do Neon)
 const pool = new Pool({
-    host: process.env.PGHOST,// Por exemplo: 'db.neon.tech'
-    database: process.env.PGDATABASE,     // Nome do seu banco de dados
-    user: process.env.PGUSER,                 // Seu usuário
-    password: process.env.PGPASSWORD,               // Sua senha
+    host: 'ep-empty-pond-a5252op8.us-east-2.aws.neon.tech',// Por exemplo: 'db.neon.tech'
+    database: 'cliente',     // Nome do seu banco de dados
+    user: 'cliente_owner',                 // Seu usuário
+    password: 'S12sqlucFfvD',               // Sua senha
     port: 5432,                          // Porta padrão do PostgreSQL
     ssl: {
       rejectUnauthorized: false, // Ajuste isso conforme necessário
