@@ -29,8 +29,75 @@
         </tr>
     </thead>
   
+    <div id="usuarios" data-usuarios='<%= JSON.stringify(usuarios) %>'></div>
 </table>
+
+
+ <p align="center" id="mostrar">mostrar : </p>
+
+
+<form id="novo">
+
+nome: <input type="text"  id="procurar" placeholder="digita o seu nome..." required>
+
+<button onclick="apertar()"> buscar </button>
+
+<div id="saida">saidar:</div>
+</form>
 </body>
+<script>
+
+
+  const teste = JSON.parse(document.getElementById('usuarios').getAttribute('data-usuarios'));
+
+    function buscar(filtro) {
+        const saida_nome = document.getElementById("saida");
+        saida_nome.innerHTML="";
+
+
+        const filtro_nome = teste.filter(nomes => 
+            nomes.nome.tolowercase().includes(filtro.tolowercase()))
+        };
+
+        filtro_nome.forEach(element => {
+            const p =document.createElement('p');
+            p.textContent= element.nome;
+            saida_nome.appendchild(p);
+        });
+
+        function buscarNome() {
+    const filtro = document.getElementById('procurar').value; // Obtém o valor do input
+    buscar(filtro); // Chama a função de filtragem
+  }
+
+
+
+
+
+
+
+
+// const nomes =teste.map(novo => novo.nome)
+    
+
+
+//     nomes.forEach(pessoas => {
+    
+//     if (pessoas=== 'luiz') {
+       
+//         document.getElementById('mostrar').innerHTML+= pessoas;
+//     }
+    
+    
+// });
+
+
+
+
+</script>
+
+
+<!-- 
 <script>
 
     const usuarios = <%- JSON.stringify(usuarios) %>; // Convertendo para JSON
@@ -53,6 +120,6 @@
      
     });
     
-    </script>
+    </script> -->
     
 </html>
